@@ -1,0 +1,259 @@
+////////////////////////////// VARS /////////////////////////////////
+@background: #FF8826;
+@option-col: #F03813;
+@head-col: #B31237;
+@extra-col: #FFB914;
+@font-col: #000000;
+@large-font: 28px;
+@med-font: 18px;
+@normal-font: 14px;
+@small-font: 10px;
+////////////////////////////// MIXINS ////////////////////////////////
+.text-alignment-theme(@align: center)
+{
+	text-align: @align;
+}
+.margins(@width: 100%)
+{
+	width: @width;
+	margin: 0 auto;
+}
+.innermargins(@divVal: 24)
+{
+	margin: percentage(1/@divVal) 0;
+}
+.innerpaddings(@divVal: 24)
+{
+	padding: percentage(1/@divVal) 0;
+}
+.li_menu_default()
+{
+	background: @extra-col;
+	.text-alignment-theme;
+}
+.a_menu_default()
+{
+	width:100%;
+	text-decoration: none;
+	color: @font-col;
+	font-size: @large-font;
+	display: block;
+	.innerpaddings(18);
+	.innermargins(48);
+}
+.ul_menu_default()
+{
+	.margins(98%);
+	list-style-type: none;
+}
+///////////////////////////// Main Styles ////////////////////////////
+@font-face
+{
+        font-family: pizza;
+        src:url('fonts/PIZZDH__.TTF');
+        src:local('fonts/PIZZDH__.TTF'),
+                url('fonts/PIZZDH__.TTF');
+}
+body {
+	font-family: pizza, helvetica, sans-serif;
+	padding: 0;
+	margin: 0;
+	background: @background;
+}
+ul {
+	margin: 0;
+	padding: 0;
+}
+footer
+{
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	overflow: auto;
+	background: @background;
+	opacity: 0.9;
+	h3 
+	{
+		.text-alignment-theme;
+	}
+}
+[role="page"]
+{
+	header {
+		width: 100%;
+		height: 400px;
+		.text-alignment-theme;
+		font-size: @large-font;
+		h1 {
+			vertical-align: middle;
+		}
+		.menuIcon
+		{
+			background-size: cover;
+			background-image: url(../img/sun_menu.png);
+			float: right;
+			//background: @option-col;
+			width: 64px;
+			height:64px;
+			cursor: pointer;
+		}
+	}
+	a 
+	{
+		text-decoration: none;
+		display: block;
+	}
+	p {
+		text-align: center;
+		padding: 0 auto;
+	}
+	.back {
+		float: left;
+		margin: 3%;
+		color: @font-col;
+		}
+	.standard
+	{
+		background-size: cover;
+		background-image: url(../img/sun_main.png);
+	}
+	.inputs
+	{
+		height:250px;
+		background-size: cover;
+		background-image: url(../img/sun_input.png);
+	}
+	.stats
+	{
+		height:125px;
+		background-size: cover;
+		background-image: url(../img/sun_stats.png);
+	}
+	.update
+	{
+		height:200px;
+		background-size: cover;
+		background-image: url(../img/sun_update.png);
+	}
+	[role="menu"]
+	{
+		ul {
+			.ul_menu_default;
+		}
+		a {
+			.a_menu_default;
+		}
+		li {
+			.li_menu_default;
+		}
+	}
+	[role="drop_menu"]
+	{
+		display: none;
+		ul {
+			.ul_menu_default;
+		}
+		a {
+			.a_menu_default;
+		}
+		li {
+			.li_menu_default;
+		}
+	}
+	ul[role="list"]
+	{
+		.margins(98%);
+		list-style-type: none;
+		a {
+			text-decoration: none;
+			color: @font-col;
+			font-size: @large-font;
+		}
+		li {
+			.innerpaddings(18);
+			.innermargins(48);
+			background: @extra-col;
+			.text-alignment-theme;
+		}
+		label 
+		{
+			float: left;
+			vertical-align: middle;
+			padding: 0 13% 0 3%;
+		}
+		.selector select
+		{
+			font-family: pizza, helvetica, sans-serif;
+			background: transparent;
+		   width: 100%;
+		   padding: 5px;
+		   font-size: 16px;
+		   line-height: 1;
+		   border: 0;
+		   border-radius: 0;
+		   height: 34px;
+		   -webkit-appearance: none;
+		}
+		.selector {
+		   width: 30%;
+		   height: 34px;
+		   overflow: hidden;
+		   background: url(../img/sun_dropdown.png) no-repeat right @background;
+			align: right;
+		  }
+		  [type="range"] {
+		  		-webkit-appearance: none; 
+				background:  @background;
+				width:40%;
+				float: left;
+		  }
+		  li[type="date"]{width: 100% !important;}
+		  input[type="range"]::-webkit-slider-thumb
+		  {
+		  	-webkit-appearance: none; 
+		  	width: 32px;  
+    		height: 32px;
+		  	background: url(../img/sun_dropdown.png) no-repeat right @background;
+		  }
+		  input[type="date"]
+		  {
+		  	-webkit-appearance: none;
+		  	font-family: pizza;
+		  	background: @background;
+		  	float: left;
+		  	padding: 5px;
+		   font-size: 16px;
+		   line-height: 1;
+		   border: 0;
+		   border-radius: 0;
+		   -webkit-appearance: none;
+		  }
+		  input[type="date"]::-webkit-calendar-picker-indicator
+		  {
+		  	-webkit-appearance: none; 
+		  	width: 32px;  
+    		height: 32px;
+		  	background: url(../img/sun_dropdown.png) no-repeat right @background;
+		  }::-webkit-inner-spin-button { display: none; }
+		  fieldset
+		  {
+		  	border: none;
+		  	margin: 0;
+		  	button {
+		  		background: transparent;
+		  		cursor: pointer;
+		  		border: none;
+				float: right;
+				width: 45%;
+				font-family: pizza;
+				background-color: @background;
+				padding: 3% 5% 3% 5%;
+				margin-left: 3%;
+		  	}
+		  	button:last-child
+		  	{
+		  		padding: 3% 0;
+		  	}
+		  }
+	}
+}

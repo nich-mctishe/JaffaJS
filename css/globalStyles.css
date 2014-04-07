@@ -1,0 +1,208 @@
+@font-face {
+  font-family: pizza;
+  src: url('fonts/PIZZDH__.TTF');
+  src: local('fonts/PIZZDH__.TTF'), url('fonts/PIZZDH__.TTF');
+}
+body {
+  font-family: pizza, helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+  background: #ff8826;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  overflow: auto;
+  background: #ff8826;
+  opacity: 0.9;
+}
+footer h3 {
+  text-align: center;
+}
+[role="page"] header {
+  width: 100%;
+  height: 400px;
+  text-align: center;
+  font-size: 28px;
+}
+[role="page"] header h1 {
+  vertical-align: middle;
+}
+[role="page"] header .menuIcon {
+  background-size: cover;
+  background-image: url(../img/sun_menu.png);
+  float: right;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+}
+[role="page"] a {
+  text-decoration: none;
+  display: block;
+}
+[role="page"] p {
+  text-align: center;
+  padding: 0 auto;
+}
+[role="page"] .back {
+  float: left;
+  margin: 3%;
+  color: #000000;
+}
+[role="page"] .standard {
+  background-size: cover;
+  background-image: url(../img/sun_main.png);
+}
+[role="page"] .inputs {
+  height: 250px;
+  background-size: cover;
+  background-image: url(../img/sun_input.png);
+}
+[role="page"] .stats {
+  height: 125px;
+  background-size: cover;
+  background-image: url(../img/sun_stats.png);
+}
+[role="page"] .update {
+  height: 200px;
+  background-size: cover;
+  background-image: url(../img/sun_update.png);
+}
+[role="page"] [role="menu"] ul {
+  width: 98%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+[role="page"] [role="menu"] a {
+  width: 100%;
+  text-decoration: none;
+  color: #000000;
+  font-size: 28px;
+  display: block;
+  padding: 5.555555555555555% 0;
+  margin: 2.083333333333333% 0;
+}
+[role="page"] [role="menu"] li {
+  background: #ffb914;
+  text-align: center;
+}
+[role="page"] [role="drop_menu"] {
+  display: none;
+}
+[role="page"] [role="drop_menu"] ul {
+  width: 98%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+[role="page"] [role="drop_menu"] a {
+  width: 100%;
+  text-decoration: none;
+  color: #000000;
+  font-size: 28px;
+  display: block;
+  padding: 5.555555555555555% 0;
+  margin: 2.083333333333333% 0;
+}
+[role="page"] [role="drop_menu"] li {
+  background: #ffb914;
+  text-align: center;
+}
+[role="page"] ul[role="list"] {
+  width: 98%;
+  margin: 0 auto;
+  list-style-type: none;
+}
+[role="page"] ul[role="list"] a {
+  text-decoration: none;
+  color: #000000;
+  font-size: 28px;
+}
+[role="page"] ul[role="list"] li {
+  padding: 5.555555555555555% 0;
+  margin: 2.083333333333333% 0;
+  background: #ffb914;
+  text-align: center;
+}
+[role="page"] ul[role="list"] label {
+  float: left;
+  vertical-align: middle;
+  padding: 0 13% 0 3%;
+}
+[role="page"] ul[role="list"] .selector select {
+  font-family: pizza, helvetica, sans-serif;
+  background: transparent;
+  width: 100%;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+  -webkit-appearance: none;
+}
+[role="page"] ul[role="list"] .selector {
+  width: 30%;
+  height: 34px;
+  overflow: hidden;
+  background: url(../img/sun_dropdown.png) no-repeat right #ff8826;
+  align: right;
+}
+[role="page"] ul[role="list"] [type="range"] {
+  -webkit-appearance: none;
+  background: #ff8826;
+  width: 40%;
+  float: left;
+}
+[role="page"] ul[role="list"] li[type="date"] {
+  width: 100% !important;
+}
+[role="page"] ul[role="list"] input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  background: url(../img/sun_dropdown.png) no-repeat right #ff8826;
+}
+[role="page"] ul[role="list"] input[type="date"] {
+  -webkit-appearance: none;
+  font-family: pizza;
+  background: #ff8826;
+  float: left;
+  padding: 5px;
+  font-size: 16px;
+  line-height: 1;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+}
+[role="page"] ul[role="list"] input[type="date"]::-webkit-calendar-picker-indicator {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  background: url(../img/sun_dropdown.png) no-repeat right #ff8826;
+}
+[role="page"] ul[role="list"] ::-webkit-inner-spin-button {
+  display: none;
+}
+[role="page"] ul[role="list"] fieldset {
+  border: none;
+  margin: 0;
+}
+[role="page"] ul[role="list"] fieldset button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  float: right;
+  width: 45%;
+  font-family: pizza;
+  background-color: #ff8826;
+  padding: 3% 5% 3% 5%;
+  margin-left: 3%;
+}
+[role="page"] ul[role="list"] fieldset button:last-child {
+  padding: 3% 0;
+}

@@ -1,0 +1,15 @@
+<div role="page">
+	<header class="stats">
+        <a class="back" href="#stat_archive.html">Back</a>
+        <div class="menuIcon" onclick="javascript:run_menus();"></div>
+        <h2>Pick an Option</h2>
+	</div>
+    <ul id="prevYearsOptions" role="drop_menu">
+    	<!-- fill list with selection of dateTime endings into an array then append for each different type of endings on this chart. find way to carry data over to next section - these need to be a links. -->
+    </ul>
+    <div class="chartArea" data-role="content" style="min-width: 100%; height: 400px; margin: 0 auto">
+    </div>
+    <script>
+		document.addEventListener("deviceready", build_options, false);
+	</script>
+</div>

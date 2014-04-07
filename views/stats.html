@@ -1,0 +1,21 @@
+<div role="page">
+	<header class="stats">
+        <a class="back" href="#main.html">Back</a>
+        <div class="menuIcon" onclick="javascript:run_menus();"></div>
+        <br>
+        <h2>Sunny Statistics</h2>
+    </header>
+    <p>Choose an option for the menu in the top right to see what kind of year you are having</p>
+    <ul role="drop_menu">
+    	<li id="sofar" data-icon="info" onclick="soFarCharts()"><a>Nice Days This Year so far</a></li>
+    	<li id="sinceBeginning" data-icon="info" onclick="sumOfNiceDaysToBad()"><a>&#037; of nice days since we began</a></li>
+    	<li id="perMonth" data-icon="info" onclick="soFarByMonth()"><a>This Year Per Month</a></li>
+        <li id="prevYears"><a href="#stat_archive.html">Previous Years</a></li>
+    </ul>
+    <div class="chartArea" data-role="content" style="min-width: 100%; height: 400px; margin: 0 auto">
+    </div>
+     <script>
+		document.addEventListener("deviceready", StatController, false);
+	</script>
+    
+</div>
