@@ -4,8 +4,8 @@ JaffaJS is a (m)VC framework for phonegap apps I built a while ago, really befor
 
 This uses JQUERY as a core and is really for: 
 
-1) Users who would like only to jQuery as their library.
-2) Users who would like to hook into phonegaps localstorage and database storage libs in an easy way.
+1 ) Users who would like only to jQuery as their library.
+2 ) Users who would like to hook into phonegaps localstorage and database storage libs in an easy way.
 
 Jaffa should sit in the phonegap www/ folder.
 
