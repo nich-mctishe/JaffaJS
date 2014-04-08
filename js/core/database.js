@@ -1,9 +1,10 @@
-var db;
-var dbExists = false; //could set it to true if i know the particular database exists. <- for test purposes only.
+ //could set it to true if i know the particular database exists. <- for test purposes only.
 
 ///////////////////////// BUild and open Database /////////////////////
 
 //checks to see whether the device is ready to begin handling database transactions - called from th ebotom of each page that requires database access.
+
+var database = {};
 
 function openDB()
 {

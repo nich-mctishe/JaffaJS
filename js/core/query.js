@@ -3,6 +3,9 @@
 //////////////////////SUCCESSFUL OPERATIONS AND THEIR CALLBACKS ARE HANDLES HERE /////////////////////////
 
 //reports uscess, but can also be made to perform other operations - cant work out if this is potentially by query or from database...
+
+var query = {};
+
 function successCB() 
 {
     //alert("success!");
@@ -19,30 +22,7 @@ function deleteSuccess()
 {
 	alert("sucessfully deleted entry");
 }
-////////////// END OF SUCCESS CALLBACKS //////////////////////
-
-/////////////// MAKE TIMESTAMP - THIS CAN BE CALLED AND ADDED FOR DEBUGGING TO MAKE A PAGE UNIQUE ////////////////
-
-function getStamp()
-{
-	var ts = Math.round((new Date()).getTime() / 1000);
-	return ts;
-}
-function setStamp()
-{	
-	var timeStamp = getStamp();
-	document.location.pathname += '#' + timeStamp;
-}
-
 //////////// END TIMESTAMP ///////////////////////
-function prepData(inputVal)
-{
-	var inputData = document.getElementById(inputVal).value;
-	//alert("input value is " + inputData);
-	
-	return inputData;
-}
-
 ///////////////// make a fucntion here to simply handle the query call. ////////////
 
 function execute()
@@ -66,8 +46,6 @@ function runQuery()
 	retrieve();
 	
 }
-
-
 //values for the where value have no '' if its a number and '' if it is a string.
 
 ////returning successful result query and dumping it into a function to be handled at the query end rather thaan the database end ///////////

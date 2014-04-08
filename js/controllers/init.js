@@ -1,5 +1,3 @@
-// JavaScript Document
-
 // globals for this class.
 var centralServerId;
 var hasSpawned = false;
@@ -67,17 +65,4 @@ function buildNewUser()
 	//alert(data);
 	buildInsert("genesis", data); //plus rows plus data
 	//buildInsert(tableName , rowName, tableVal)
-}
-
-function updateCentralServer()
-{
-	//check for internet connection and abandon if no connection available.
-	
-	
-	//try to cross ref data, or perhaps just write an xml file and send that file across.
-}
-
-function initialError(err)
-{
-	//alert("database empty - running initial insert statement");
 }
