@@ -18,13 +18,15 @@
 @formTextareaHeight: 100%;
 
 //font family
-@font-family: 'helvetica, arial, sans-serif';
+@main-font-family: helvetica, arial, sans-serif;
+@secondary-font-family: cambria, serif;
+@backup-font-family: monaco, sans-serif;
 
 //font sizes
 //please put your range of colour schemes in here.
 @h1: 24px;
 @h2: 21px;
-@h3: 18px
+@h3: 18px;
 @p: 16px;
 @p-small: 12px;
 
@@ -32,8 +34,111 @@
 //this is for you to customise the colour scheme you desire.
 @mainCol: #349857;
 @head-text-Col: #398439;
-@textCol: #349857;
+@textCol: #676095;
 @secondaryCol: #349857;
 @thirdCol: #349857;
 
 /* MIXINS */
+.header_bar(@width: @deviceWidth){
+	float: left;
+	width: @width;
+	height: 5%;
+	background: @mainCol;
+}
+.footer_bar(@width: @deviceWidth){
+	float: left;
+	width: @width;
+	height: 5%;
+	background: @mainCol;
+}
+.menu_paddings(@width: @contentWidth){
+	width: @width;
+	margin: 0 ((@width - 100) / 2);
+}
+.indv-menu-margins()
+{
+	padding: 3% 0;
+	margin: 1% auto;
+}
+.content-margin(@width: @contentWidth) {
+	width: @width;
+	margin: 0 auto;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: @main-font-family;
+}
+[role="page"]
+{
+	header {
+		&[role="standard"] {
+			.header_bar;
+		}
+		&[role="standard-centered"] {
+			.header_bar;
+			text-align: center;
+		}
+		//add extra headers here.
+	}
+	nav {
+		.content-margin;
+		&[role="menu"] {
+			width: @deviceWidth;
+			ul {
+				list-style-type: none;
+				.menu_paddings;
+				li {
+					width: 100%;
+					float: left;
+					background: @secondaryCol;
+					.indv-menu-margins;
+					a{
+						display: block;
+						text-align: center;
+						text-decoration: none;
+						color: @textCol;
+					}
+				}
+			}
+		}
+		&[role="drop"] {
+			ul {
+				.menu_paddings;
+				li {
+					a{}
+				}
+			}
+		}
+	}
+	section {
+		.content-margin;
+		&[role="main"]
+		{
+			width: 2% auto;
+			p {
+				width: 100%;
+				float: left;
+			}
+		}
+	}
+}
+footer {
+	&[role="standard"] {
+		.footer_bar;
+		text-align: center;
+	}
+	&[role="standard-bottom"] {
+		.footer_bar;
+		position: absolute;
+		text-align: center;
+		bottom: 0;
+	}
+	&[role="standard-bottom-fixed"] {
+		.footer_bar;
+		position: fixed;
+		text-align: center;
+		bottom: 0;
+	}
+	//add extra footers here
+}

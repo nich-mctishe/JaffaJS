@@ -1,9 +1,8 @@
 //Loader.js
 var loader = {
-	loadInit : function(initPage)
+	loadInit : function()
 	{
-		if(initPage === null) initPage = "main.html"; //this may be reducndant as it could involve syntax error.
-		$('#ajax_content').load(configs.viewRoute + initPage, function() //main.html should be default
+		$('#ajax_content').load(configs.viewRoute + configs.initPage, function() //main.html should be default
 		{
 			$('#ajax_content').fadeIn("fast");
 		});

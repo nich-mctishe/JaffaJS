@@ -1,6 +1,6 @@
-# JaffaJS Version 0.1 alpha 
+# JaffaJS Version 0.2 alpha 
 
-## JaffaJS is a (m)VC framework for phonegap apps I built a while ago, really before the likes of angular or backbone were an option. 
+#### JaffaJS is a (m)VC framework for phonegap apps I built a while ago, really before the likes of angular or backbone were an option. 
 
 This uses JQUERY as a core and is really for: 
 
@@ -13,4 +13,55 @@ forgive the rough edges, im trying to tidy it up as I get more spare time.
 
 This framework should be available using the GPU and MIT licences. 
 
-instruction manual to follow....
+## Documentation
+
+#### contents:
+
+1. Setup
+2. How it works.
+3. Config
+4. Libs
+5. Controllers
+6. helpers
+* SQLite
+* Localstorage
+* AJAX(REST)
+* JaffaScript
+* Time 
+* Datatypes
+7. Stylesheet
+
+#### Setup.
+
+
+
+
+#### How It Works.
+
+
+
+
+#### Config.
+
+
+
+
+#### Liraries.
+
+
+
+
+#### Controllers.
+
+
+
+
+#### Helpers.
+
+
+
+
+#### Stylesheets.
+
+
+

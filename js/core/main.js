@@ -1,9 +1,9 @@
 // main.js
 
 //this will be a class for helpers.
-//may split into timeHelper , dataTypeHelper, and AJAXHElper.
+//split into timeHelper , dataTypeHelper, and AJAXHElper.
 
-var main = {
+var timeHelper = {
 	//TIME
 	formatTime: function(timeInput)
 	{
@@ -51,7 +51,9 @@ var main = {
 	{	
 		var timeStamp = getStamp();
 		document.location.pathname += '#' + timeStamp;
-	},
+	}
+};	
+var dataTypeHelper = {
 	//DATATYPES
 	convertToString: function(input)
 	{
@@ -69,13 +71,27 @@ var main = {
 	isString: function (obj) {
 		return toString.call(obj) == '[object String]';
 	},
+	isThisString: function(val)
+	{
+		var isstring = false;
+		
+		if(val.substring)
+		{
+			isstring = true;
+		} else {
+			isstring = false;
+		}
+		return isstring;
+	},
 	prepData: function(inputName)
 	{
 		var inputData = document.getElementById(inputName).value;
 		//alert("input value is " + inputData);
 		
 		return inputData;
-	},
+	}
+};
+var AJAXHelper = {
 	//AJAX
 	_read: function(input){
 		if(!input.type || input.type === null) input.type = 'GET';
@@ -106,6 +122,11 @@ var main = {
 	},
 	_update: function(input){
 		if(!input.type || input.type === null) input.type = 'GET';
+		$.ajax({
+			url: input.url,
+			type: input.type,
+			data: input.data,
+		}).done(input.successCB).fail(input.failCB).always(function() {console.log("complete");});
 	},
 	_delete: function(input){
 		if(!input.type || input.type === null) input.type = 'GET';
