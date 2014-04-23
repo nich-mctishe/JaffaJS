@@ -2,7 +2,7 @@
     <header class="standard">
     	<h1>Your JaffaJS Form!</h1>
 	</header>
-	<nav role="menu">
+	<nav role="drop-menu">
 		<ul>
 	    	<li><a href="#form.html">View a Form</a></li>
 	    	<li><a href="#page.html">See a Page</a></li>
@@ -11,6 +11,28 @@
     	</ul>
 	</nav>
 	<section class="main">
-		<p>If you are seeing this page then your JaffaJS project is working. Why select some of the above optins to views some of teh features of JaffaJS</p>
+		<p>PLease fill out this form below and click submit:</p>
+		<form action="">
+			<ul role="form-list">
+				<li><label for="name">Please Enter your name</label></li>
+				<li><input type="text" name="name"></li>
+				<li><label for="age">Age</label><input type="number" name="age"></li>
+				<li>Don't lie now!</li>
+				<li><input type="submit" value="submit it!"></li>
+			</ul>
+		</form>
+		<p>this form can be processed and added to either a SQLITE file served through PhoneGap and sent using our <a href="#manual/database.html">Database Helper</a> or to an external site using our <a href="#manual/AJAXhelper.html">AJAX Helper</a></p>
+		<ul role="internal-icons-list">
+			<li id="results-icon">see the results of your data!</li>
+		</ul>
+	</section>
+	<section class="main" id="results">
+		<table role="table-standard" id="results-table">
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
 	</section>
 </div>

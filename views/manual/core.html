@@ -1,0 +1,22 @@
+<div role="page">
+    <header class="standard">
+    	<h1>JaffaJS Manual</h1>
+	</header>
+	<nav role="drop-menu">
+	</nav>
+	<section class="main">
+		<h1>Core</h1>
+		<p>The core files sit inside the the folder js/core/ and contain the following files:</p>
+		<ol>
+			<li>configs.js - this is where you can set global configerations. more about this file can be found <a href="#manual/configs.html">here</a></li>
+			<li>database.js - this is the class that handles database calls to SQLite files in phonegap. more about this can be found <a href="#manual/database.html">here</a></li>
+			<li>init.js - This is where inital calls to the controller are run. You are also free to add whatever calls to otehr files in here</li>
+			<li>jaffaScript.js - this is used for rendering menus. more can be found <a href="#manual/jaffascript.html">here</a></li>
+			<li>jquery-1.9.1.min.js - is the current build of jQuery, this is here so that the app can function without internet connectivity. IT is advised to check to make sure you have the most current stable version at all times, dependant on your build options.</li>
+			<li>loader.js - this is where teh pages and/or resources are loaded. more can be found <a href="#manual/loader.html">here</a></li>
+			<li>localstorage.js - this is a file that handle HTML5 localstorage transaction. more cn be found <a href="#manual/localstorage.html">here</a></li>
+			<li>main.js - this is where the <a href="#manual/timeHelper.html">time</a>, <a href="#manual/dataTypeHelper.html">data type</a> and <a href="#manual/AJAXhelper.html">AJAX helper</a> objects are kept.</li>
+		</ol>
+		<p>All files here are called from the file index.html in between the CORE comments. If you need to add any further core classes, the make sure they are placed here inside <code>&lt;script&gt;&lt;/script&gt; tags</code></p>
+	</section>
+</div>

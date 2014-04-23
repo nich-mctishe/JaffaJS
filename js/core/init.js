@@ -4,6 +4,7 @@ $(document).ready(function()
 	//load first page.
 	init.loadInit();
 	initController.onDeviceReady();
+	jaffascript.run_menus();
 });
 var init = {
 	loadInit: function(){

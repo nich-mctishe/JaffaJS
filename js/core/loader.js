@@ -34,5 +34,10 @@ var loader = {
 		$('#ajax_content').fadeOut("fast", function(){
 			parent.history.back();
 		});
+	},
+	loadResource: function(pageName, element) 
+	{
+		url = configs.viewRoute + pageName;
+		$(element).load(url);
 	}
 };

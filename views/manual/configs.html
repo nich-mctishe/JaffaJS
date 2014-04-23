@@ -1,0 +1,32 @@
+<div role="page">
+    <header class="standard">
+    	<h1>JaffaJS Manual</h1>
+	</header>
+	<nav role="drop-menu">
+	</nav>
+	<section class="main">
+		<h1>Config object.</h1>
+		<p>The config object can be found indie the js/core/configs.js file and site above the DBSeeder.</p>
+		<ul role="bullet-list">
+			<li><code>"viewRoute" : "views/"</code> - this is where you can specify where you would like to keep all your view files. Views are kept in the views folder by default. </li>
+			<li><code>"controllerRoute" : "js/controllers"</code> - this is where you can specify where you keep all of the controller files. by defualt they are kept in the js/controllers/ folder.</li>
+			<li><code>"initPage" : "main.html"</code> - in the Loader there is an init function, that loads the first page on app load. This page can be specified here. The function uses teh viewroute varaible above to determine where the view is. By default teh initPage is main.html</li>
+			<li><code>DBname</code> - this is where you can specifiy the name of your SQLite database if you would like one, by default there is no db.</li>
+			<li><code>DBversion</code> - this is the version of SQLite you would liek to use, but default we use version 1.0 but this can be changed. (please make sure teh version you are using is supportred by phonegap.)</li>
+			<li><code>DBdisplayName</code> - a human name for the db.</li>
+			<li><code>DBsize</code> - the size in bytes of your database.</li>
+			<li><code>MenuType: fade</code> this how the jaffascript menu will fade in or out, this is fade by default but currently has the ability to be slide if needed too.</li>
+			<li><code>Months</code>
+				<p>JaffaJS makes it as easy as possible to support language and calender variations wjile still trying to maintain a lightweight framework. We have placed a standard Gregorian calender in English into this section by default but this can be changed if neccessary. Then all time based events you call can go directly or indirectly (through the <a href="#manual/timeHelper">Time helper</a>)</p>
+				<ul role="bullet-list">
+					<li><code>name</code></li>
+					<li><code>shortName</code></li>
+					<li><code>amount</code> - amoutnt of days in each month from jan - dec</li>
+					<li><code>amoutnLeapYear</code> - amount of days in each month in a leap year from jan - dec</li>
+				</ul>
+			</li>
+		</ul>
+		<p>these variable can be called by using <code>configs.desiredVariable i.e configs.initPage</code> or for the nested vars <code>cofigs.months.shortName[5]</code> if you would like to return the value of "may"</p>
+		<p>you are free to add any global variable you may need into this object.</p>
+	</section>
+</div>

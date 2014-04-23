@@ -4,18 +4,18 @@ var jaffaScript = {
 	{
 		if(this.menu_selected)
 		{
-			$('[role="drop_menu"]').fadeIn('fast' , function(){});
+			$('[role="drop-menu"]').fadeIn('fast' , function(){});
 		} else {
-			$('[role="drop_menu"]').fadeOut('fast' , function(){});
+			$('[role="drop-menu"]').fadeOut('fast' , function(){});
 		}
 	},
 	display_slide_menu : function()
 	{
 		if(this.menu_selected)
 		{
-			$('[role="drop_menu"]').slideDown('fast' , function(){});
+			$('[role="drop-menu"]').slideDown('fast' , function(){});
 		} else {
-			$('[role="drop_menu"]').slideUp('fast' , function(){});
+			$('[role="drop-menu"]').slideUp('fast' , function(){});
 		}
 	},
 	run_menus : function()

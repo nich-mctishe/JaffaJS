@@ -1,0 +1,32 @@
+<div role="page">
+    <header class="standard">
+    	<h1>JaffaJS Manual</h1>
+	</header>
+	<nav role="drop-menu" class="manual-menu">
+	</nav>
+	<section role="main">
+		<h1>Controllers</h1>
+		<p>Controllers are objects that handle all the requests that are being made. Be that requests for a new page, requests to the server, or simple population of a field, the controller will either either perform the request itself or use one of the many helper objects to complete the task for it.</p>
+		<p>Ideally Controllers should be split along each main operation. For example this Application has three controllers.</p>
+		<ul role="bullet-list">
+			<li>initial controller - each application will need a controller to begin performing functions on page load.</li>
+			<li>form controller - to handle to saving and displaying of the data on the form</li>
+			<li>manual controller - to assist with the displaying of the manual</li>
+		</ul>
+		<p>to save on code many pages will not need a controller to function. a static page in JaffaJS will spawn using only the <a href="#manual/loader.html">Loader.</a></p>
+		<p>each controller will need to the following code:</p>
+		<code>
+			var myController = {
+				onDeviceReady: function()
+				{
+					//code goes here to be called when the controller is first loaded
+				},
+				controllerIcons: function(){
+					//this is where you should place all the calls to external 'pages' in this script so that their onDeviceReady functions will run.
+				}
+			}
+		</code>
+		<p>All controllers are placed in the folder js/controllers/ and will need to be called from the index.html page inside <code>&lt;script&gt;&lt;/script&gt;</code> tags</p>
+		<p>please remember that all controller object need unique name, but the same controller can be called many times.</p>
+	</section>
+</div>

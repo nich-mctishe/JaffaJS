@@ -1,0 +1,18 @@
+<div role="page">
+    <header class="standard">
+    	<h1>JaffaJS Manual</h1>
+	</header>
+	<nav role="drop-menu">
+	</nav>
+	<section class="main">
+		<h1>The Loader</h1>
+		<p>The loader is the class that allows pages to be loaded easily using jQueries .load() class.</p>
+		<p>The loader has a haschange event listener so you can just throw urls starting with # and the file route into an anchor tag and the loader will load the page, provided the page sits inside the views file.</p>
+		<p>this base views route can be altered inside the /js/core/configs.js file. More on this file can be found <a href="#manual/configs.html">here</a></p>
+		<p>alternately if you would like to could force a page by calling <code>loader.loadNewPage(pageName)</code> if oyu would like a whole page change, or <code>loader.loadResource(pageName , element)</code> if you would like to just place a segment of a page into an existing page. </p>
+		<p>loader.loadNewPage(pageName) where pageName is the route to the page insde the views file.</p>
+		<p>loader.loadResource(pageName , element) where the pageName is the route to a segment that sits inside the views file by default (but can be cahnged as mentioned above) , and teh element is the class or id of the element that needs to be loaded. element needs to a be string looking like <code>'#element'</code> for id or <code>'.element'</code> for class etc. This will then change add your desired content into the container you have specified using a very raw and unclean .load() function. </p>
+		<p>loader.goBack() : this function can be added to any back button to force a return to the previous page.</p>
+		<p>feel free to customise these functions for your needs.</p>
+	</section>
+</div>
