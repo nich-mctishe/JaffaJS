@@ -12,3 +12,6 @@ var initController = {
 	}
 };
 
+// var hg = hg || {
+// 	initController
+// };
