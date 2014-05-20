@@ -10,6 +10,7 @@ var init = {
 	loadInit: function(){
 		//this is where all initial function will be placed.
 		loader.loadInit();
+		loader.extract_hash();
 		loader.check_hash();
 	}
 };

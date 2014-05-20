@@ -53,7 +53,8 @@
 }
 .menu_paddings(@width: @contentWidth){
 	width: @width;
-	margin: 0 ((@width - 100) / 2);
+	margin: 0 ((100 - @width) / 2);
+	float: left;
 }
 .indv-menu-margins()
 {
@@ -69,11 +70,25 @@ body {
 	padding: 0;
 	font-family: @main-font-family;
 }
+#ajax_container, #ajax_content {
+	width: 100%;
+	float: left;
+}
 [role="page"]
 {
+	width: 100%;
+	float: left;
 	header {
 		&[role="standard"] {
 			.header_bar;
+			a {
+				width: 25%;
+				float: left;
+			}
+			h1 {
+				width: 75%;
+				float: left;
+			}
 		}
 		&[role="standard-centered"] {
 			.header_bar;
@@ -87,6 +102,7 @@ body {
 			width: @deviceWidth;
 			ul {
 				list-style-type: none;
+				padding: 0px;
 				.menu_paddings;
 				li {
 					width: 100%;
@@ -115,9 +131,11 @@ body {
 		.content-margin;
 		&[role="main"]
 		{
-			width: 2% auto;
+			width: 100%;
+			float: left;
 			p {
-				width: 100%;
+				width: 90%;
+				margin:2% 5%;
 				float: left;
 			}
 		}

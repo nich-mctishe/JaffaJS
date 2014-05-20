@@ -44,7 +44,7 @@ var DBSeeder = {
 	seed: function(){
 		//run the seed of the database based on the data in the object.
 		for (var i = 0; i < this.tableObj.table.length; i++) {
-			//cycle through each table obj and rub the populateDB function
+			//cycle through each table obj and run the populateDB function
 			database.tbName = this.tableObj.table[i].name;
 			database.tbConfigVals = this.tableObj.table[i].columnVals;
 			database.populateDB;

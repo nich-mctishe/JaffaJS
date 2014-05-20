@@ -25,9 +25,13 @@ var loader = {
 	},
 	extract_hash: function()
 	{
-		var rawUrl = window.location.hash;
-		var url = rawUrl.split("#");
-		this.loadNewPage(url[1]);
+		if(window.location.hash != "") {
+			var rawUrl = window.location.hash;
+			var url = rawUrl.split("#");
+			this.loadNewPage(url[1]);
+		} else {
+			this.loadNewPage(configs.initPage);
+		}
 	},
 	go_back: function()
 	{

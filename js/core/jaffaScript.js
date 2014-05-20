@@ -1,4 +1,4 @@
-var jaffaScript = {
+var jaffascript = {
 	"menu_selected" : false,
 	display_fade_menu : function()
 	{
