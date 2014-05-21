@@ -108,7 +108,10 @@ var AJAXHelper = {
 		$.ajax({
 			url: input.url,
 			type: input.type,
-		}).done(input.successCB).fail(input.failCB).always(function() {console.log("complete");});
+			success: function(data) {input.successCB(data)},
+			fail: function( jqXHR, textStatus, errorThrown ) {input.fail(jqXHR, textStatus, errorThrown) },
+			always: console.log(" ajax read complete ")
+		});
 		
 	},
 	_write: function(input){
@@ -117,7 +120,10 @@ var AJAXHelper = {
 			url: input.url,
 			type: input.type,
 			data: input.data,
-		}).done(input.successCB).fail(input.failCB).always(function() {console.log("complete");});
+			success: function(data) {input.successCB(data)},
+			fail: function( jqXHR, textStatus, errorThrown ) {input.fail(jqXHR, textStatus, errorThrown) },
+			always: console.log(" ajax write complete ")
+		});
 		
 	},
 	_update: function(input){
@@ -126,13 +132,19 @@ var AJAXHelper = {
 			url: input.url,
 			type: input.type,
 			data: input.data,
-		}).done(input.successCB).fail(input.failCB).always(function() {console.log("complete");});
+			success: function(data) {input.successCB(data)},
+			fail: function( jqXHR, textStatus, errorThrown ) {input.fail(jqXHR, textStatus, errorThrown) },
+			always: console.log(" ajax update complete ")
+		});
 	},
 	_delete: function(input){
 		if(!input.type || input.type === null) input.type = 'GET';
 		$.ajax({
 			url: input.url,
 			type: input.type,
-		}).done(input.successCB).fail(input.failCB).always(function() {console.log("complete");});
+			success: function(data) {input.successCB(data)},
+			fail: function( jqXHR, textStatus, errorThrown ) {input.fail(jqXHR, textStatus, errorThrown) },
+			always: console.log(" ajax delete complete ")
+		});
 	},
 };
