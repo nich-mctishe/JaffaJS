@@ -22,11 +22,16 @@ body {
   background: #349857;
 }
 [role="page"] header[role="standard"] a {
-  width: 25%;
+  width: 12.5%;
   float: left;
+  background: #357438;
 }
 [role="page"] header[role="standard"] h1 {
+  float: left;
   width: 75%;
+}
+[role="page"] header[role="standard"] button {
+  width: 12.5%;
   float: left;
 }
 [role="page"] header[role="standard-centered"] {
@@ -63,10 +68,25 @@ body {
   text-decoration: none;
   color: #676095;
 }
-[role="page"] nav[role="drop"] ul {
+[role="page"] nav[role="drop-menu"] ul {
+  padding: 0px;
   width: 90%;
   margin: 0 5%;
   float: left;
+  list-style-type: none;
+}
+[role="page"] nav[role="drop-menu"] ul li {
+  width: 94%;
+  margin: 1%;
+  padding: 2%;
+  float: left;
+  background: #349857;
+}
+[role="page"] nav[role="drop-menu"] ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: #676095;
 }
 [role="page"] section {
   width: 90%;

@@ -82,11 +82,16 @@ body {
 		&[role="standard"] {
 			.header_bar;
 			a {
-				width: 25%;
+				width: 12.5%;
 				float: left;
+				background: #357438;
 			}
 			h1 {
+				float: left;
 				width: 75%;
+			}
+			button {
+				width: 12.5%;
 				float: left;
 			}
 		}
@@ -118,11 +123,24 @@ body {
 				}
 			}
 		}
-		&[role="drop"] {
+		&[role="drop-menu"] {
+			//display: none; //remmeber to make this display none;
 			ul {
+				padding: 0px;
 				.menu_paddings;
+				list-style-type: none;
 				li {
-					a{}
+					width: 94%;
+					margin: 1%;
+					padding: 2%;
+					float: left;
+					background: @secondaryCol;
+					a{
+						display: block;
+						text-align: center;
+						text-decoration: none;
+						color: @textCol;
+					}
 				}
 			}
 		}
